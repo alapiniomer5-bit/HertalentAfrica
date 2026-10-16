@@ -3,7 +3,11 @@ import "dotenv/config";
 const port = Number(process.env.PORT ?? 3000);
 if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error("PORT invalide");
 
-const rawDatabaseUrl = process.env.DATABASE_URL?.trim();
+export function normalizeDatabaseUrl(value) {
+  return value?.trim().replace(/^["']+|["']+$/g, "") ?? "";
+}
+
+const rawDatabaseUrl = normalizeDatabaseUrl(process.env.DATABASE_URL);
 let databaseUrl = null;
 if (rawDatabaseUrl) {
   try {

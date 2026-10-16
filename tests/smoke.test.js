@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { createSessionToken, hashToken, bearerToken } from "../server/lib/tokens.js";
+import { normalizeDatabaseUrl } from "../server/config.js";
 
 test("les jetons de session sont aléatoires et hachés", () => {
   const first = createSessionToken();
@@ -42,4 +43,11 @@ test("la configuration Render ne publie aucun secret", async () => {
   assert.match(blueprint, /plan: free/);
   assert.match(blueprint, /key: DATABASE_URL\s+sync: false/);
   assert.doesNotMatch(blueprint, /postgres(?:ql)?:\/\//);
+});
+
+test("les guillemets parasites sont retirés de DATABASE_URL", () => {
+  const url = "postgresql://user:password@example.com:6543/postgres";
+  assert.equal(normalizeDatabaseUrl(`\"${url}\"`), url);
+  assert.equal(normalizeDatabaseUrl(`${url}\"`), url);
+  assert.equal(normalizeDatabaseUrl(`'${url}'`), url);
 });
