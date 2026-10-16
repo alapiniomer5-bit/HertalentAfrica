@@ -27,6 +27,8 @@ test("le frontend charge toutes ses ressources locales", async () => {
   assert.match(html, /href="assets\/hertalent-logo\.png"/);
   assert.match(app, /class="brand-logo" src="assets\/hertalent-logo\.png"/);
   assert.doesNotMatch(app, /class="brand-mark"/);
+  assert.doesNotMatch(html, /VERSION PRIVÉE|preview-bar/);
+  assert.doesNotMatch(app, /version privée|prototype privé|accès privé|À propos du prototype/i);
 });
 
 test("la migration contient les principaux modules métier", async () => {
