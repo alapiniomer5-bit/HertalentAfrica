@@ -15,7 +15,7 @@ const icons = {
 };
 const icon = n => `<svg class="icon" aria-hidden="true" viewBox="0 0 24 24">${icons[n]||icons.arrow}</svg>`;
 const arrow = () => icon('arrow');
-const brand = () => `<a class="brand" href="#/" aria-label="HerTalent Africa, accueil"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M7 8v24M29 8v24M7 20h22" stroke="currentColor" stroke-width="5" fill="none"/><path d="m18 10 7-7" stroke="currentColor" stroke-width="3"/></svg><span class="brand-name">HerTalent<span>AFRICA</span></span></a>`;
+const brand = () => `<a class="brand" href="#/" aria-label="HerTalent Africa, accueil"><img class="brand-logo" src="assets/hertalent-logo.png" alt="" width="2129" height="524"></a>`;
 const STORE_KEY='hertalent-africa-v1';
 const BACKEND_SESSION_KEY='hertalent-africa-session-token';
 const freshState=()=>({accounts:{},activeRole:null,favorites:[],applications:[],missions:[],threads:[],drafts:{},available:true});

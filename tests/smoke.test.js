@@ -19,9 +19,14 @@ test("le middleware lit un jeton Bearer", () => {
 
 test("le frontend charge toutes ses ressources locales", async () => {
   const html = await readFile(new URL("../public/index.html", import.meta.url), "utf8");
+  const app = await readFile(new URL("../public/app.js", import.meta.url), "utf8");
   assert.match(html, /href="styles\.css"/);
+  assert.match(html, /href="brand\.css"/);
   assert.match(html, /src="data\.js"/);
   assert.match(html, /src="app\.js"/);
+  assert.match(html, /href="assets\/hertalent-logo\.png"/);
+  assert.match(app, /class="brand-logo" src="assets\/hertalent-logo\.png"/);
+  assert.doesNotMatch(app, /class="brand-mark"/);
 });
 
 test("la migration contient les principaux modules métier", async () => {
