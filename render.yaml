@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: hertalent-africa
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: DATABASE_SSL
+        value: "true"
+      - key: SESSION_TTL_DAYS
+        value: "90"
