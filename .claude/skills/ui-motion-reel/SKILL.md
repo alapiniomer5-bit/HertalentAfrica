@@ -1,11 +1,11 @@
 ---
 name: ui-motion-reel
-description: Créer une vidéo/animation promo courte (15–25 s) au style "UI motion design" — typographie cinétique, curseurs multijoueurs, cartes 3D flottantes, menu radial, roue de mots 3D, transitions en blocs de couleur, signature manuscrite lumineuse, blob dégradé liquide, outro logo. Utiliser quand on demande une intro animée, un reel produit, un teaser de marque, une landing animée ou un motion design web (GSAP / Framer Motion / Remotion / CSS).
+description: Créer une vidéo/animation promo courte (15–25 s) au style "UI motion design" — typographie cinétique, curseurs multijoueurs, cartes 3D flottantes, menu radial, roue de mots 3D, transitions en blocs de couleur, signature manuscrite lumineuse, blob dégradé liquide, final logo + mascotte. Utiliser quand on demande une intro animée, un reel produit, un teaser de marque, une landing animée ou un motion design web (GSAP / Framer Motion / Remotion / CSS).
 ---
 
 # UI Motion Reel
 
-Recette tirée d'un reel de référence (23 s, 1024×576, 30 fps). Rythme : **une idée visuelle par 1,5–3 s**, transitions enchaînées sans coupe sèche.
+Recette tirée d'un reel de référence (~18 s utiles, 1024×576, 30 fps). Rythme : **une idée visuelle par 1,5–3 s**, transitions enchaînées sans coupe sèche.
 
 ## 1. Structure (storyboard type)
 
@@ -20,8 +20,7 @@ Recette tirée d'un reel de référence (23 s, 1024×576, 30 fps). Rythme : **un
 | 10–11 | **Barre d'outils** | Toolbar UI flottante, curseur clique un outil, caméra zoome + perspective sur l'outil |
 | 12–15 | **Signature** | Texte script tracé au stroke (stroke-dashoffset), une pointe lumineuse + curseur nommé suit le tracé |
 | 16 | **Blob CTA** | Forme liquide floue en dégradé (bleu/rose/orange), texte CTA sur chemin courbe qui ondule |
-| 17–18 | **Logo + avatar** | Logo seul, puis glisse à gauche, avatar/mascotte entre à droite (clin d'œil) |
-| 19–23 | **Outro** | Logo + handle/URL dans une barre de recherche, glitch RGB léger |
+| 17–18 | **Final : logo + avatar** | Logo seul, puis glisse à gauche, avatar/mascotte entre à droite (clin d'œil) |
 
 Adapter : garder l'ordre **énergie haute (sombre) → clarté (blanc) → démo produit → signature perso → CTA → logo**.
 

@@ -166,7 +166,7 @@ tl.from("ellipse", { scale: 0, transformOrigin: "50% 50%", duration: .8, ease: "
   .to("#curve", { attr: { d: "M80 160 Q260 220 400 160 T720 175" }, duration: 1.2, yoyo: true, repeat: 1, ease: "sine.inOut" }, "<");
 ```
 
-## 11. Logo + mascotte, puis outro
+## 11. Final : logo + mascotte
 
 ```js
 tl.from(".logo", { scale: 0, rotate: -20, ease: "back.out(2)" })
