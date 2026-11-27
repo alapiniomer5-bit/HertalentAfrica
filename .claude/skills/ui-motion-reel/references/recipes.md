@@ -171,11 +171,7 @@ tl.from("ellipse", { scale: 0, transformOrigin: "50% 50%", duration: .8, ease: "
 ```js
 tl.from(".logo", { scale: 0, rotate: -20, ease: "back.out(2)" })
   .to(".logo", { x: "-12vw", delay: .4 })
-  .from(".mascot", { x: "12vw", opacity: 0, scale: .6, ease: "back.out(1.8)" }, "<")
-  .to("#stage", { background: "#111522", duration: .3 })
-  .from(".handle-bar", { scaleX: 0, transformOrigin: "left", duration: .5 });
-// glitch RGB outro
-gsap.to(".handle-bar", { boxShadow: "-4px 0 #ff2d55, 4px 0 #20e3e3", repeat: 5, yoyo: true, duration: .05, delay: tl.duration() - .6 });
+  .from(".mascot", { x: "12vw", opacity: 0, scale: .6, ease: "back.out(1.8)" }, "<");
 ```
 
 ---
